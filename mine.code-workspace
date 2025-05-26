@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{
+			"path": "../dino game"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "dino game"
+	}
+}
