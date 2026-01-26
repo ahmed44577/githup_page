@@ -3,73 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خطة الإنتاج - مشروع PCB 2026</title>
+    <title>خطة المعركة - مشروع سير PCB 2026</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; margin: 20px; line-height: 1.6; }
-        .container { max-width: 1200px; margin: auto; background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        h1 { text-align: center; color: #1a5f7a; border-bottom: 3px solid #1a5f7a; padding-bottom: 10px; }
-        .alert-box { background-color: #fff3cd; border-right: 5px solid #ffca2c; padding: 15px; margin: 20px 0; border-radius: 5px; }
-        .report-template { background-color: #e3f2fd; border-right: 5px solid #2196f3; padding: 15px; margin: 20px 0; border-radius: 5px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 15px; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f7f6; margin: 20px; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: auto; background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        h1, h2 { text-align: center; color: #1a5f7a; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .alert-box { background-color: #fff3cd; border-right: 5px solid #ffca2c; padding: 20px; margin: 20px 0; border-radius: 8px; }
+        .classroom-btn { display: inline-block; background: #28a745; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 10px; }
+        
+        /* Grid for Tasks */
+        .task-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 20px; }
+        .task-card { background: #f8f9fa; border: 1px solid #e0e0e0; padding: 15px; border-radius: 10px; border-right: 5px solid #1a5f7a; }
+        .task-card h3 { margin-top: 0; color: #d63384; font-size: 1.1em; }
+        .task-card p { font-size: 0.95em; margin: 5px 0; }
+        .serves { font-weight: bold; color: #2c3e50; background: #eef; padding: 2px 5px; border-radius: 3px; }
+
+        /* Table Style */
+        table { width: 100%; border-collapse: collapse; margin-top: 30px; }
         th, td { border: 1px solid #dee2e6; padding: 12px; text-align: center; }
         th { background-color: #1a5f7a; color: white; }
-        .week-title { background-color: #2c3e50; color: white; font-weight: bold; }
-        .classroom-btn { display: inline-block; background: #28a745; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 10px 0; }
-        .classroom-btn:hover { background: #218838; }
-        .important-note { color: #d63384; font-weight: bold; }
+        .week-title { background-color: #343a40; color: white; font-weight: bold; }
+        
+        .footer-note { background: #e3f2fd; padding: 15px; border-radius: 8px; margin-top: 30px; border-right: 5px solid #2196f3; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>📅 جدول تنفيذ مشروع سير الـ PCB (الخطة الشهرية)</h1>
-    
+    <h1>🚀 خطة المعركة: مشروع سير الـ PCB الذكي</h1>
+
     <div class="alert-box">
-        <strong>⚠️ ملاحظة هامة للقائد والفريق:</strong> يتم رفع جميع المخرجات (CAD, Code, Images) على Google Classroom في المواعيد المحددة أدناه.
-        <br>
-        <a href="https://classroom.google.com/c/ODM1MDM2ODI2NDY2" class="classroom-btn" target="_blank">رابط الـ Google Classroom</a>
+        <strong>📢 تنبيهات القائد (أحمد ثروت):</strong>
+        <ul>
+            <li>الهدف: تعديل التصميم ليكون **أقل تكلفة، حجم مناسب، وأداء احترافي**.</li>
+            <li><strong>التوثيق:</strong> أي خطوة تخلص ارفعها فوراً بصورة أو فيديو على الكلاس روم.</li>
+            <li><strong>الريبورت:</strong> ارفق (اسمك، المهمة، ما تم إنجازه، المشاكل، الخطوة الجاية) مع كل تسليم.</li>
+        </ul>
+        <a href="https://classroom.google.com/c/ODM1MDM2ODI2NDY2" class="classroom-btn" target="_blank">رابط Google Classroom 🔗</a>
     </div>
 
-    <div class="report-template">
-        <strong>📝 نموذج الريبورت المطلوب مع كل تسليم:</strong><br>
-        (اسم العضو - المهمة المنفذة - ما تم إنجازه - المشاكل - الخطوة القادمة)
+    <h2>🛠️ توزيع المهام (مين هيعمل إيه؟)</h2>
+    <div class="task-grid">
+        <div class="task-card">
+            <h3>1. محمد فاروق (كبير المصممين)</h3>
+            <p><strong>التاسك:</strong> مراجعة التصميم وتحديد تعديلات العرض لـ 300 مم بأقل تكلفة.</p>
+            <p><span class="serves">بيخدم على:</span> عبد الشهيد، عبد الفتاح، محمد أيمن.</p>
+        </div>
+        <div class="task-card">
+            <h3>2. أحمد عبد الشهيد (الرسام)</h3>
+            <p><strong>التاسك:</strong> رسم كل مسمار وقطعة (2D & 3D) على SolidWorks بدقة الملي.</p>
+            <p><span class="serves">بيخدم على:</span> ثروت، صبري، عبد الفتاح.</p>
+        </div>
+        <div class="task-card">
+            <h3>3. محمد أيمن (تصميم ميكانيكي)</h3>
+            <p><strong>التاسك:</strong> تصميم "منظومة النقل" والسيور والبكرات لضمان ثبات البوردة.</p>
+            <p><span class="serves">بيخدم على:</span> عبد الفتاح، عبد الله فرغل.</p>
+        </div>
+        <div class="task-card">
+            <h3>4. عبد الفتاح (تصميم ميكانيكي)</h3>
+            <p><strong>التاسك:</strong> تصميم حوامل المواتير (Brackets) ووصلات الحركة (Couplings).</p>
+            <p><span class="serves">بيخدم على:</span> فرغل، عبد الرحمن سعيد.</p>
+        </div>
+        <div class="task-card">
+            <h3>5. أحمد ثروت (القائد)</h3>
+            <p><strong>التاسك:</strong> تصميم الشاسيه الخارجي ولوحة الكنترول وتجميع الـ Master Assembly.</p>
+            <p><span class="serves">بيخدم على:</span> الفريق بالكامل.</p>
+        </div>
+        <div class="task-card">
+            <h3>6. عبد الله فرغل (الأحمال)</h3>
+            <p><strong>التاسك:</strong> حساب العزم (Torque) المطلوب لتقليل تكلفة المواتير ومنع الحرق.</p>
+            <p><span class="serves">بيخدم على:</span> صبري، جنه.</p>
+        </div>
+        <div class="task-card">
+            <h3>7. صبري (كهرباء ومواتير)</h3>
+            <p><strong>التاسك:</strong> الربط الميكانيكي للمواتير واختيار الأنواع (Stepper/DC).</p>
+            <p><span class="serves">بيخدم على:</span> خميس، إبراهيم.</p>
+        </div>
+        <div class="task-card">
+            <h3>8. جنه (كلاسيك كنترول)</h3>
+            <p><strong>التاسك:</strong> تصميم دوائر الحماية، الفيوزات، وتوصيلات الـ Power Supply.</p>
+            <p><span class="serves">بتخدم على:</span> إبراهيم، أحمد خميس.</p>
+        </div>
+        <div class="task-card">
+            <h3>9. أحمد خميس (إلكترونيات)</h3>
+            <p><strong>التاسك:</strong> تنفيذ الـ PCBs، اللحامات، وتجميع الدرايفرات.</p>
+            <p><span class="serves">بيخدم على:</span> إبراهيم، عبد الرحمن سعيد.</p>
+        </div>
+        <div class="task-card">
+            <h3>10. إبراهيم (توصيلات وتحكم)</h3>
+            <p><strong>التاسك:</strong> تقفيل لوحة الكهرباء، تدكيك السلوك، وتوصيل الـ Limit Switches.</p>
+            <p><span class="serves">بيخدم على:</span> عبد الرحمن سعيد.</p>
+        </div>
+        <div class="task-card">
+            <h3>11. عبد الرحمن سعيد (برمجة)</h3>
+            <p><strong>التاسك:</strong> برمجة الأردوينو، معايرة المسافات، وتجربة التشغيل النهائي.</p>
+            <p><span class="serves">بيخدم على:</span> جودة المنتج النهائي.</p>
+        </div>
     </div>
 
+    <h2>📅 الجدول الزمني للتنفيذ</h2>
     <table>
         <thead>
             <tr>
-                <th>اليوم</th>
-                <th>التاريخ</th>
-                <th>المهمة المطلوبة</th>
+                <th>اليوم/التاريخ</th>
+                <th>المرحلة</th>
                 <th>المسؤول</th>
-                <th>بيسلم لمين؟</th>
+                <th>التسليم</th>
             </tr>
         </thead>
         <tbody>
-            <tr class="week-title"><td colspan="5">الأسبوع 1: الرفع الهندسي وحسابات القوى</td></tr>
-            <tr><td>الثلاثاء</td><td>27/1</td><td>رفع مقاسات الموديل القديم وتحديد تعديلات الـ 300 مم</td><td>فاروق، عبد الشهيد، محمد أيمن</td><td>عبد الفتاح وصبري</td></tr>
-            <tr><td>الأربعاء</td><td>28/1</td><td>رسم التعديلات النهائية (2D & 3D) SolidWorks</td><td>عبد الشهيد، فاروق</td><td>فرغل وثروت</td></tr>
-            <tr><td>الخميس</td><td>29/1</td><td>حسابات الأحمال والعزم (Torque) لتقليل التكلفة</td><td>عبد الله فرغل</td><td>جنه وصبري</td></tr>
-            <tr><td>الجمعة</td><td>30/1</td><td>اختيار المواتير والباور وتجهيز الـ Data Sheets</td><td>جنه، صبري</td><td>أحمد ثروت</td></tr>
-            <tr><td>السبت</td><td>31/1</td><td>تصميم الشاسيه ولوحة الكنترول وتجميع الـ Master CAD</td><td>أحمد ثروت</td><td>الفريق كله</td></tr>
+            <tr class="week-title"><td colspan="4">الأسبوع 1: الرفع الهندسي وحسابات القوى</td></tr>
+            <tr><td>27/1 - 28/1</td><td>رفع المقاسات والرسم الميكانيكي</td><td>فاروق، عبد الشهيد، أيمن</td><td>فرغل وثروت</td></tr>
+            <tr><td>29/1 - 31/1</td><td>حساب الأحمال واختيار المواتير والماستر كاد</td><td>فرغل، جنه، صبري، ثروت</td><td>فريق المشتريات</td></tr>
+            
+            <tr class="week-title"><td colspan="4">الأسبوع 2: المشتريات والتأسيس الميكانيكي</td></tr>
+            <tr><td>1/2 - 2/2</td><td>شراء الخامات والمواتير</td><td>ثروت، عبد الشهيد</td><td>فريق التنفيذ</td></tr>
+            <tr><td>3/2 - 7/2</td><td>تجميع الشاسيه ومنظومة الحركة والحوامل</td><td>فاروق، أيمن، عبد الفتاح، صبري</td><td>خميس وإبراهيم</td></tr>
 
-            <tr class="week-title"><td colspan="5">الأسبوع 2: المشتريات والتأسيس الميكانيكي</td></tr>
-            <tr><td>الأحد</td><td>1/2</td><td>شراء الخامات والمواتير والسيور والبروفايلات</td><td>أحمد ثروت، عبد الشهيد</td><td>فريق الميكانيكا</td></tr>
-            <tr><td>الاثنين-الأربعاء</td><td>2/2-4/2</td><td>تقطيع الألومنيوم وتركيب منظومة الحركة العرضية والطولية</td><td>فاروق، أيمن، عبد الفتاح</td><td>صبري وفرغل</td></tr>
-            <tr><td>الخميس-السبت</td><td>5/2-7/2</td><td>تنفيذ حوامل المواتير وتثبيت المواتير ميكانيكياً</td><td>عبد الفتاح، صبري</td><td>خميس وإبراهيم</td></tr>
+            <tr class="week-title"><td colspan="4">الأسبوع 3: الإلكترونيات وتوصيل الطاقة</td></tr>
+            <tr><td>8/2 - 14/2</td><td>تقفيل اللوحة، الباور، السلوك، والحساسات</td><td>خميس، إبراهيم، جنه</td><td>عبد الرحمن سعيد</td></tr>
 
-            <tr class="week-title"><td colspan="5">الأسبوع 3: الإلكترونيات وتوصيل الطاقة</td></tr>
-            <tr><td>الأحد-الثلاثاء</td><td>8/2-10/2</td><td>تجميع لوحة الكنترول ولحام الـ PCBs وتجهيز الدرايفرات</td><td>أحمد خميس، إبراهيم</td><td>عبد الرحمن وجنه</td></tr>
-            <tr><td>الأربعاء</td><td>11/2</td><td>تصميم وتوصيل دوائر الكلاسيك كنترول والحماية</td><td>جنه</td><td>إبراهيم وخميس</td></tr>
-            <tr><td>الخميس-السبت</td><td>12/2-14/2</td><td>تمديد الأسلاك وتركيب الحساسات وترتيب الكابلات</td><td>إبراهيم، أحمد خميس</td><td>عبد الرحمن سعيد</td></tr>
-
-            <tr class="week-title"><td colspan="5">الأسبوع 4: البرمجة والتقفيل النهائي</td></tr>
-            <tr><td>الأحد-الثلاثاء</td><td>15/2-17/2</td><td>برمجة الأردوينو ومعايرة المسافات وسرعة السير</td><td>عبد الرحمن سعيد</td><td>الفريق كله</td></tr>
-            <tr><td>الأربعاء</td><td>18/2</td><td>التزييت النهائي وشد السيور وتقفيل المسامير</td><td>فاروق، عبد الفتاح، أيمن</td><td>أحمد ثروت</td></tr>
-            <tr style="background-color: #f1c40f; font-weight: bold;">
-                <td>الخميس</td><td>26/2</td><td>يوم التسليم النهائي وتصوير الفيديو وتوثيق المشروع</td><td>الجميع</td><td>لجنة المناقشة</td></tr>
+            <tr class="week-title"><td colspan="4">الأسبوع 4: البرمجة والتقفيل النهائي</td></tr>
+            <tr><td>15/2 - 24/2</td><td>البرمجة والمعايرة والـ Testing</td><td>عبد الرحمن + الفريق</td><td>التسليم النهائي</td></tr>
+            <tr style="background: #27ae60; color: white;">
+                <td>25/2 - 26/2</td>
+                <td>اليوم الكبير: تصوير الفيديو والمناقشة</td>
+                <td>الجميع</td>
+                <td>تم الإنجاز ✅</td>
+            </tr>
         </tbody>
     </table>
+
+    <div class="footer-note">
+        <strong>💡 طريقة العمل المشترك:</strong> أي حد يخلص جزء يرفعه على الدرايف أو الكلاس روم. لو حد اتعطل يبلغ ثروت قبلها بـ 24 ساعة. إحنا فريق واحد وهدفنا نطلع حاجة تشرف!
+    </div>
 </div>
 
 </body>
