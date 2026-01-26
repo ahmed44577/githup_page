@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خطة الإنتاج - مشروع PCB 2026</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; margin: 20px; line-height: 1.6; }
+        .container { max-width: 1200px; margin: auto; background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #1a5f7a; border-bottom: 3px solid #1a5f7a; padding-bottom: 10px; }
+        .alert-box { background-color: #fff3cd; border-right: 5px solid #ffca2c; padding: 15px; margin: 20px 0; border-radius: 5px; }
+        .report-template { background-color: #e3f2fd; border-right: 5px solid #2196f3; padding: 15px; margin: 20px 0; border-radius: 5px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 15px; }
+        th, td { border: 1px solid #dee2e6; padding: 12px; text-align: center; }
+        th { background-color: #1a5f7a; color: white; }
+        .week-title { background-color: #2c3e50; color: white; font-weight: bold; }
+        .classroom-btn { display: inline-block; background: #28a745; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin: 10px 0; }
+        .classroom-btn:hover { background: #218838; }
+        .important-note { color: #d63384; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📅 جدول تنفيذ مشروع سير الـ PCB (الخطة الشهرية)</h1>
+    
+    <div class="alert-box">
+        <strong>⚠️ ملاحظة هامة للقائد والفريق:</strong> يتم رفع جميع المخرجات (CAD, Code, Images) على Google Classroom في المواعيد المحددة أدناه.
+        <br>
+        <a href="https://classroom.google.com/c/ODM1MDM2ODI2NDY2" class="classroom-btn" target="_blank">رابط الـ Google Classroom</a>
+    </div>
+
+    <div class="report-template">
+        <strong>📝 نموذج الريبورت المطلوب مع كل تسليم:</strong><br>
+        (اسم العضو - المهمة المنفذة - ما تم إنجازه - المشاكل - الخطوة القادمة)
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>اليوم</th>
+                <th>التاريخ</th>
+                <th>المهمة المطلوبة</th>
+                <th>المسؤول</th>
+                <th>بيسلم لمين؟</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="week-title"><td colspan="5">الأسبوع 1: الرفع الهندسي وحسابات القوى</td></tr>
+            <tr><td>الثلاثاء</td><td>27/1</td><td>رفع مقاسات الموديل القديم وتحديد تعديلات الـ 300 مم</td><td>فاروق، عبد الشهيد، محمد أيمن</td><td>عبد الفتاح وصبري</td></tr>
+            <tr><td>الأربعاء</td><td>28/1</td><td>رسم التعديلات النهائية (2D & 3D) SolidWorks</td><td>عبد الشهيد، فاروق</td><td>فرغل وثروت</td></tr>
+            <tr><td>الخميس</td><td>29/1</td><td>حسابات الأحمال والعزم (Torque) لتقليل التكلفة</td><td>عبد الله فرغل</td><td>جنه وصبري</td></tr>
+            <tr><td>الجمعة</td><td>30/1</td><td>اختيار المواتير والباور وتجهيز الـ Data Sheets</td><td>جنه، صبري</td><td>أحمد ثروت</td></tr>
+            <tr><td>السبت</td><td>31/1</td><td>تصميم الشاسيه ولوحة الكنترول وتجميع الـ Master CAD</td><td>أحمد ثروت</td><td>الفريق كله</td></tr>
+
+            <tr class="week-title"><td colspan="5">الأسبوع 2: المشتريات والتأسيس الميكانيكي</td></tr>
+            <tr><td>الأحد</td><td>1/2</td><td>شراء الخامات والمواتير والسيور والبروفايلات</td><td>أحمد ثروت، عبد الشهيد</td><td>فريق الميكانيكا</td></tr>
+            <tr><td>الاثنين-الأربعاء</td><td>2/2-4/2</td><td>تقطيع الألومنيوم وتركيب منظومة الحركة العرضية والطولية</td><td>فاروق، أيمن، عبد الفتاح</td><td>صبري وفرغل</td></tr>
+            <tr><td>الخميس-السبت</td><td>5/2-7/2</td><td>تنفيذ حوامل المواتير وتثبيت المواتير ميكانيكياً</td><td>عبد الفتاح، صبري</td><td>خميس وإبراهيم</td></tr>
+
+            <tr class="week-title"><td colspan="5">الأسبوع 3: الإلكترونيات وتوصيل الطاقة</td></tr>
+            <tr><td>الأحد-الثلاثاء</td><td>8/2-10/2</td><td>تجميع لوحة الكنترول ولحام الـ PCBs وتجهيز الدرايفرات</td><td>أحمد خميس، إبراهيم</td><td>عبد الرحمن وجنه</td></tr>
+            <tr><td>الأربعاء</td><td>11/2</td><td>تصميم وتوصيل دوائر الكلاسيك كنترول والحماية</td><td>جنه</td><td>إبراهيم وخميس</td></tr>
+            <tr><td>الخميس-السبت</td><td>12/2-14/2</td><td>تمديد الأسلاك وتركيب الحساسات وترتيب الكابلات</td><td>إبراهيم، أحمد خميس</td><td>عبد الرحمن سعيد</td></tr>
+
+            <tr class="week-title"><td colspan="5">الأسبوع 4: البرمجة والتقفيل النهائي</td></tr>
+            <tr><td>الأحد-الثلاثاء</td><td>15/2-17/2</td><td>برمجة الأردوينو ومعايرة المسافات وسرعة السير</td><td>عبد الرحمن سعيد</td><td>الفريق كله</td></tr>
+            <tr><td>الأربعاء</td><td>18/2</td><td>التزييت النهائي وشد السيور وتقفيل المسامير</td><td>فاروق، عبد الفتاح، أيمن</td><td>أحمد ثروت</td></tr>
+            <tr style="background-color: #f1c40f; font-weight: bold;">
+                <td>الخميس</td><td>26/2</td><td>يوم التسليم النهائي وتصوير الفيديو وتوثيق المشروع</td><td>الجميع</td><td>لجنة المناقشة</td></tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
