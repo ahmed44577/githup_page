@@ -2,100 +2,220 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>خطة التجهيز لمسابقة سيسكو 2026 | طريق مدريد</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم المسار الاحترافي 2026</title>
     <style>
         :root {
-            --cisco-blue: #00bceb;
-            --industrial-gold: #ffcc00;
-            --cyber-red: #ff4d4d;
+            --primary: #00bceb; /* Cisco Blue */
+            --accent: #ffcc00; /* Industrial Gold */
+            --danger: #ff4d4d;
             --bg: #0d1117;
             --card: #161b22;
             --text: #c9d1d9;
         }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); padding: 20px; }
-        .container { max-width: 1100px; margin: auto; }
-        .header { text-align: center; border: 2px solid var(--cisco-blue); padding: 20px; border-radius: 15px; margin-bottom: 30px; }
-        .deadline { color: var(--cyber-red); font-weight: bold; font-size: 1.2rem; }
-        .week-box { background: var(--card); border-right: 5px solid var(--cisco-blue); margin-bottom: 20px; padding: 20px; border-radius: 8px; }
-        .cisco-course { background: rgba(0, 188, 235, 0.1); padding: 10px; border-radius: 5px; margin-top: 10px; font-size: 0.9rem; }
-        .cisco-course b { color: var(--cisco-blue); }
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        th, td { border: 1px solid #30363d; padding: 12px; text-align: right; }
-        th { background: #21262d; }
-        .robot-skill { color: var(--industrial-gold); }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1200px; margin: auto; }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-bottom: 4px solid var(--primary);
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        h1 { color: var(--primary); margin-bottom: 10px; }
+        .deadline-alert { color: var(--danger); font-weight: bold; font-size: 1.1rem; }
+
+        .section-title {
+            border-right: 5px solid var(--accent);
+            padding-right: 15px;
+            margin: 40px 0 20px;
+            color: var(--accent);
+        }
+
+        /* قائمة المهمات */
+        .tasks-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .task-item {
+            background: var(--card);
+            padding: 15px;
+            border-radius: 10px;
+            border-right: 3px solid var(--primary);
+        }
+
+        .task-item h4 { margin-top: 0; color: var(--primary); }
+
+        /* الجدول الزمني */
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .schedule-table th, .schedule-table td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #30363d;
+        }
+
+        .schedule-table th { background: #21262d; color: var(--primary); }
+        .schedule-table tr:hover { background: #1c2128; }
+
+        .cisco-tag { background: rgba(0, 188, 235, 0.2); color: var(--primary); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; }
+        .indust-tag { background: rgba(255, 204, 0, 0.2); color: var(--accent); padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; }
+
+        .nav-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover { background-color: #0099cc; transform: scale(1.05); }
+
     </style>
 </head>
 <body>
 
 <div class="container">
     <div class="header">
-        <h1>🏆 مشروع البطل: خبير الأنظمة المدمجة والأمن السيبراني</h1>
-        <p>الهدف: إنهاء الدورات والامتحان قبل <span class="deadline">8 مارس 2026</span></p>
+        <h1>لوحة تحكم طريق مدريد (Cisco Cup 2026)</h1>
+        <p>المستهدف: خبير أتمتة صناعية وأمن سيبراني</p>
+        <p class="deadline-alert">الموعد النهائي للامتحانات: 8 مارس 2026</p>
     </div>
 
-    <div class="week-box">
-        <h3>الأسبوع 1: البنية التحتية والإنترنت (Networking & IoT)</h3>
-        <div class="cisco-course">
-            📘 <b>كورسات سيسكو المطلوبة:</b> 
-            1. Networking Basics (22 ساعة) | 
-            2. Introduction to IoT & Digital Transformation (6 ساعات)
+    <h2 class="section-title">1. ملخص المهمات الرئيسية (To-Do List)</h2>
+    <div class="tasks-summary">
+        <div class="task-item">
+            <h4>🖥️ البرمجيات والتطبيقات</h4>
+            <ul>
+                <li>تثبيت Visual Studio وتفعيل مكتبات C++ و Windows API.</li>
+                <li>إعداد بيئة Arduino IDE للتعامل مع ESP32.</li>
+                <li>تثبيت محاكي WPLSoft و Studio 5000 للتحكم الصناعي.</li>
+            </ul>
         </div>
-        <table>
-            <tr><th>الأيام</th><th>المهمة العملية (C++ & Automation)</th></tr>
-            <tr><td>1 - 4</td><td>دراسة أساسيات الشبكات وربط ESP32 عبر الـ WiFi (تطبيقاً لكورس سيسكو).</td></tr>
-            <tr><td>5 - 7</td><td>فهم التحول الرقمي وربط الحساسات بالـ Cloud باستخدام C++.</td></tr>
-        </table>
+        <div class="task-item">
+            <h4>🎓 كورسات سيسكو المعتمدة</h4>
+            <ul>
+                <li>Networking Basics (22 ساعة).</li>
+                <li>Industrial Networking Essentials (35 ساعة).</li>
+                <li>Introduction to Modern AI (6 ساعات).</li>
+                <li>Introduction to Cybersecurity & Digital Safety.</li>
+            </ul>
+        </div>
+        <div class="task-item">
+            <h4>⚙️ التطبيق العملي</h4>
+            <ul>
+                <li>برمجة Modbus TCP للربط بين ESP32 والكمبيوتر.</li>
+                <li>تطبيق إعدادات Kinco VFD (التشغيل والسرعة).</li>
+                <li>بناء نظام حماية ضد التصيد (Phishing) ودمج Gemini AI.</li>
+            </ul>
+        </div>
     </div>
 
-    <div class="week-box" style="border-right-color: var(--industrial-gold);">
-        <h3>الأسبوع 2: الشبكات الصناعية والتحكم (Industrial Control)</h3>
-        <div class="cisco-course">
-            📘 <b>كورس سيسكو المطلوب:</b> Industrial Networking Essentials (35 ساعة)
-        </div>
-        <table>
-            <tr><th>الأيام</th><th>المهمة العملية (Kinco & Robots)</th></tr>
-            <tr><td>8 - 11</td><td>تطبيق بروتوكولات الشبكات الصناعية على إنفرتر Kinco CV20.</td></tr>
-            <tr><td>12 - 14</td><td><span class="robot-skill">مهارة متقدمة:</span> دراسة مفاهيم Studio 5000 والـ Motion Axes للروبوتات (كما في صورة Rockwell).</td></tr>
-        </table>
+    <h2 class="section-title">2. الجدول الزمني التفصيلي (الخطة الكبرى)</h2>
+    <table class="schedule-table">
+        <thead>
+            <tr>
+                <th>اليوم</th>
+                <th>التاريخ</th>
+                <th>وقت البدء</th>
+                <th>وقت الانتهاء</th>
+                <th>المهمة المقررة</th>
+                <th>النوع</th>
+            </tr>
+        </thead>
+        <tbody id="scheduleBody">
+            <tr>
+                <td>1</td>
+                <td>28 يناير</td>
+                <td>09:00 ص</td>
+                <td>05:00 م</td>
+                <td>إعداد البيئة (Visual Studio) + كود C++ الأول (MessageBox)</td>
+                <td><span class="indust-tag">برمجة</span></td>
+            </tr>
+            <tr>
+                <td>2 - 5</td>
+                <td>29 يناير - 1 فبراير</td>
+                <td>10:00 ص</td>
+                <td>04:00 م</td>
+                <td>دراسة Networking Basics (Cisco) + ربط ESP32 بالواي فاي</td>
+                <td><span class="cisco-tag">سيسكو</span></td>
+            </tr>
+            <tr>
+                <td>6 - 10</td>
+                <td>2 - 6 فبراير</td>
+                <td>09:00 ص</td>
+                <td>05:00 م</td>
+                <td>بروتوكول Modbus TCP وتحليل الحزم (Wireshark)</td>
+                <td><span class="indust-tag">صناعي</span></td>
+            </tr>
+            <tr>
+                <td>11 - 18</td>
+                <td>7 - 14 فبراير</td>
+                <td>09:00 ص</td>
+                <td>06:00 م</td>
+                <td>Industrial Networking Essentials + إعدادات Kinco VFD</td>
+                <td><span class="cisco-tag">سيسكو / صناعي</span></td>
+            </tr>
+            <tr>
+                <td>19 - 24</td>
+                <td>15 - 20 فبراير</td>
+                <td>10:00 ص</td>
+                <td>04:00 م</td>
+                <td>الأمن السيبراني (Cybersecurity) + بناء محاكي التصيد</td>
+                <td><span class="cisco-tag">أمن</span></td>
+            </tr>
+            <tr>
+                <td>25 - 30</td>
+                <td>21 - 26 فبراير</td>
+                <td>09:00 ص</td>
+                <td>05:00 م</td>
+                <td>الذكاء الاصطناعي (Modern AI) + دمج Gemini API في C++</td>
+                <td><span class="cisco-tag">AI</span></td>
+            </tr>
+            <tr>
+                <td>31 - 35</td>
+                <td>27 فبراير - 3 مارس</td>
+                <td>09:00 ص</td>
+                <td>08:00 م</td>
+                <td>تجهيز الـ Portfolio والتقديم على امتحانات سيسكو النهائية</td>
+                <td><span class="indust-tag">تخرج</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="text-align: center;">
+        <a href="https://www.netacad.com/" target="_blank" class="nav-btn">الانتقال إلى أكاديمية سيسكو لبدء الكورسات</a>
     </div>
 
-    <div class="week-box" style="border-right-color: var(--cyber-red);">
-        <h3>الأسبوع 3: الحصن الرقمي (Cybersecurity Deep-Dive)</h3>
-        <div class="cisco-course">
-            📘 <b>كورسات سيسكو المطلوبة:</b> 
-            1. Introduction to Cybersecurity (6 ساعات) | 
-            2. Digital Safety and Security Awareness (6 ساعات)
-        </div>
-        <table>
-            <tr><th>الأيام</th><th>المهمة العملية (Defensive Programming)</th></tr>
-            <tr><td>15 - 18</td><td>تطبيق مبادئ السلامة الرقمية على لوحات تحكم المصنع ومنع الـ Phishing.</td></tr>
-            <tr><td>19 - 21</td><td>تأمين الاتصال بين الـ ESP32 والكمبيوتر ومنع اختراق الـ Registers.</td></tr>
-        </table>
-    </div>
-
-    <div class="week-box" style="border-right-color: #bc13fe;">
-        <h3>الأسبوع 4: الذكاء الاصطناعي والتوأم الرقمي (Modern AI)</h3>
-        <div class="cisco-course">
-            📘 <b>كورس سيسكو المطلوب:</b> Introduction to Modern AI (6 ساعات)
-        </div>
-        <table>
-            <tr><th>الأيام</th><th>المهمة العملية (AI Integration)</th></tr>
-            <tr><td>22 - 25</td><td>دمج Gemini API مع بيانات الحساسات لتحليل "صحة الشبكة" تلقائياً.</td></tr>
-            <tr><td>26 - 28</td><td>بناء Dashboard ذكية تعرض بيانات الـ VFD والشبكة في وقت واحد.</td></tr>
-        </table>
-    </div>
-
-    <div class="week-box" style="border-right-color: #f1f5f9;">
-        <h3>الأسبوع 5: المراجعة النهائية والامتحان (Career Path)</h3>
-        <div class="cisco-course">
-            🎯 <b>الهدف النهائي:</b> اجتياز امتحان Network Technician Career Path (40 سؤالاً)
-        </div>
-        <table>
-            <tr><th>الأيام</th><th>المهمة النهائية</th></tr>
-            <tr><td>29 - 32</td><td>مراجعة شاملة لجميع الكورسات وحل نماذج أسئلة سيسكو.</td></tr>
-            <tr><td>33 - 35</td><td>إنهاء الامتحان أونلاين وتوثيق الشهادات (قبل موعد 8 مارس).</td></tr>
-        </table>
-    </div>
+    <footer style="margin-top: 50px; text-align: center; color: #64748b; font-size: 0.8rem;">
+        <p>مبني بناءً على طلبك لدمج (C++، Kinco، ESP32، Cisco Cup 2026)</p>
+        <p>جميع الحقوق محفوظة لخطة نجاحك 2026</p>
+    </footer>
 </div>
 
 </body>
