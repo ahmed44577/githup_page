@@ -2,147 +2,152 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>المخطط التنفيذي الشامل | طريق مدريد 2026</title>
+    <title>الموسوعة الكاملة: خطة التحول لعام 2026</title>
     <style>
         :root {
-            --primary: #00bceb; --accent: #39ff14; --warning: #ffcc00; --danger: #ff3131;
-            --bg: #0a0f1e; --card: #161e31; --text: #e0e6ed;
+            --cisco: #00bceb; --kinco: #ffcc00; --cyber: #ff3131; --ai: #bc13fe;
+            --bg: #050a14; --card: #101827; --text: #e5e7eb;
         }
-        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; }
-        .container { max-width: 1200px; margin: auto; }
-        .header { text-align: center; padding: 50px; background: linear-gradient(135deg, #161e31 0%, #0a0f1e 100%); border-radius: 20px; border: 2px solid var(--primary); margin-bottom: 30px; }
-        h1 { color: var(--primary); font-size: 2.5rem; }
-        .deadline { color: var(--danger); font-weight: bold; font-size: 1.2rem; border: 1px solid var(--danger); padding: 5px 15px; border-radius: 50px; }
+        body { font-family: 'Segoe UI', Tahoma; background: var(--bg); color: var(--text); padding: 20px; line-height: 1.8; }
+        .container { max-width: 1300px; margin: auto; }
+        .hero { text-align: center; padding: 60px 20px; border: 3px solid var(--cisco); border-radius: 25px; margin-bottom: 40px; background: linear-gradient(to bottom, #101827, #050a14); }
+        h1 { font-size: 3rem; color: var(--cisco); margin: 0; }
+        .deadline-box { display: inline-block; padding: 10px 30px; background: var(--cyber); color: white; border-radius: 50px; font-weight: bold; margin-top: 20px; }
         
-        .task-detail { background: var(--card); border-right: 5px solid var(--primary); padding: 20px; margin-bottom: 20px; border-radius: 10px; }
-        .task-detail h3 { color: var(--warning); margin-top: 0; }
-        .how-to { background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px; margin-top: 10px; border: 1px dashed #444; }
-        .how-to b { color: var(--accent); }
+        .section-header { border-right: 8px solid var(--cisco); padding-right: 20px; margin: 50px 0 20px; font-size: 1.8rem; color: var(--cisco); }
+        .detail-card { background: var(--card); padding: 25px; border-radius: 15px; margin-bottom: 25px; border: 1px solid #1f2937; position: relative; overflow: hidden; }
+        .detail-card::before { content: ""; position: absolute; top: 0; right: 0; width: 5px; height: 100%; }
+        .card-cpp::before { background: #00d2ff; }
+        .card-kinco::before { background: var(--kinco); }
+        .card-cyber::before { background: var(--cyber); }
+        .card-ai::before { background: var(--ai); }
 
-        table { width: 100%; border-collapse: collapse; margin-top: 40px; background: var(--card); border-radius: 10px; overflow: hidden; }
-        th, td { padding: 15px; text-align: center; border: 1px solid #2d3748; }
-        th { background: var(--primary); color: #000; }
-        .cisco-row { border-right: 5px solid var(--primary); }
-        .industrial-row { border-right: 5px solid var(--warning); }
+        .how-to-box { background: rgba(0,0,0,0.4); padding: 20px; border-radius: 10px; margin-top: 15px; border: 1px solid #333; }
+        .how-to-box b { color: var(--cisco); display: block; margin-bottom: 10px; font-size: 1.1rem; }
         
-        .badge { padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
-        .bg-cisco { background: rgba(0, 188, 235, 0.2); color: var(--primary); }
-        .bg-tech { background: rgba(57, 255, 20, 0.2); color: var(--accent); }
+        table { width: 100%; border-collapse: collapse; margin-top: 30px; background: var(--card); }
+        th, td { padding: 18px; border: 1px solid #1f2937; text-align: center; }
+        th { background: var(--cisco); color: black; font-size: 1.1rem; }
+        .status-badge { padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <header>
-        <h1>🏆 خريطة طريق المهندس الهجين 2026</h1>
-        <p>مشروع الدمج: Cisco Cup + Industrial Automation + AI + Security</p>
-        <p class="deadline">تاريخ الانتهاء النهائي: 8 مارس 2026</p>
-    </header>
+    <div class="hero">
+        <h1>مشروع "المهندس الشامل" 2026</h1>
+        <p>الدمج النهائي بين البرمجة، التحكم الصناعي، الأمن، والذكاء الاصطناعي</p>
+        <div class="deadline-box">الموعد النهائي للامتحانات: 8 مارس 2026</div>
+    </div>
 
-    <h2 style="color: var(--primary);">أولاً: شرح تفصيلي للمهمات (كيفية التنفيذ)</h2>
+    <h2 class="section-header">أولاً: تفاصيل المهمات (شرح التنفيذ الكامل)</h2>
 
-    <div class="task-detail">
-        <h3>1. التأسيس البرمجي والربط (C++ & Networking)</h3>
-        <p>الهدف: جعل الكمبيوتر يتحكم في البرامج والأجهزة الخارجية.</p>
-        <div class="how-to">
-            <b>كيفية التنفيذ:</b><br>
-            • تثبيت Visual Studio واختيار حزمة Desktop Development with C++.<br>
-            • استخدام مكتبة <code>Windows.h</code> لكتابة أوامر نظام الويندوز.<br>
-            • <b>كورس سيسكو (Networking Basics):</b> دراسة كيفية عمل الـ IP والـ Subnet لربط الـ ESP32 بالكمبيوتر بشكل صحيح.
+    <div class="detail-card card-cpp">
+        <h3>1. البرمجة التأسيسية (C++ & Windows Automation)</h3>
+        <p>الهدف: السيطرة على نظام التشغيل وبناء "واجهة القيادة".</p>
+        <div class="how-to-box">
+            <b>خطوات التنفيذ بالتفصيل:</b>
+            • تثبيت Visual Studio واختيار حزمة "Desktop Development with C++".<br>
+            • <b>التنفيذ البرمجي:</b> استخدام مكتبة <code>Windows.h</code> لعمل <code>MessageBox</code> (رسائل تنبيه للنظام) و <code>ShellExecute</code> لفتح برامج مثل WPLSoft أو المتصفح أوتوماتيكياً عند بدء العمل.<br>
+            • <b>الربط الشبكي:</b> استخدام مكتبة Winsock لبناء اتصال TCP بسيط يرسل "أرقام" لجهاز ESP32.
         </div>
     </div>
 
-    <div class="task-detail">
-        <h3>2. الأتمتة الصناعية (Kinco VFD & Studio 5000)</h3>
-        <p>الهدف: التحكم في سرعة المواتير وبرمجة الأنظمة الصناعية.</p>
-        <div class="how-to">
-            <b>كيفية التنفيذ:</b><br>
-            • <b>الإنفرتر:</b> الرجوع لكتالوج Kinco CV20 لضبط باراميترات السرعة (عنوان 0002H).<br>
-            • <b>Studio 5000:</b> محاكاة حركة المحاور (Motion Axes) كما في الروبوتات الكارتيزية.<br>
-            • <b>كورس سيسكو (Industrial Networking):</b> تطبيق إعدادات الشبكة المذكورة في الكورس على أجهزة المصنع.
+    <div class="detail-card card-kinco">
+        <h3>2. التحكم الصناعي والروبوتات (Kinco, ESP32, Studio 5000)</h3>
+        <p>الهدف: تحويل الكود البرمجي إلى حركة فيزيائية في المصنع.</p>
+        <div class="how-to-box">
+            <b>خطوات التنفيذ بالتفصيل:</b>
+            • <b>إنفرتر Kinco:</b> فتح كتالوج CV20 صفحة 9، تحديد عنوان <code>0001H</code> للتشغيل وعنوان <code>0002H</code> لتغيير السرعة عبر المودباس.<br>
+            • <b>ESP32:</b> تحميل مكتبة <code>ModbusIP_ESP32</code> وجعل الجهاز يعمل كـ "وسيط" يستقبل أوامر C++ وينفذها على الإنفرتر.<br>
+            • <b>أنظمة الروبوتات:</b> دراسة مفاهيم الـ Motion Axes والـ Drive PowerFlex باستخدام Studio 5000 (كما في صورة Rockwell) للتحكم في الأذرع الروبوتية ABB IRC5.
         </div>
     </div>
 
-    <div class="task-detail">
-        <h3>3. الأمن السيبراني التطبيقي (Cyber Defense)</h3>
-        <p>الهدف: حماية الأنظمة الصناعية من الاختراق والتصيد.</p>
-        <div class="how-to">
-            <b>كيفية التنفيذ:</b><br>
-            • <b>نظام التدريب:</b> بناء صفحة تسجيل دخول وهمية بـ HTML لتعريف المهندسين بخطر الـ Phishing.<br>
-            • <b>أمن الكاميرا:</b> فهم كود <code>getUserMedia()</code> لمنع الوصول غير المصرح به للكاميرات الموصلة.<br>
-            • <b>كورسات سيسكو:</b> إنهاء Introduction to Cybersecurity لفهم مبادئ التشفير والحماية.
+    <div class="detail-card card-cyber">
+        <h3>3. الأمن السيبراني والمراسلات (Cyber Defense)</h3>
+        <p>الهدف: حماية الشبكة الصناعية من الاختراق وضمان أمن الاتصال.</p>
+        <div class="how-to-box">
+            <b>خطوات التنفيذ بالتفصيل:</b>
+            • <b>التصيد (Phishing):</b> بناء صفحة تسجيل دخول وهمية بـ HTML لتدريب الموظفين على اكتشاف الروابط الخبيثة.<br>
+            • <b>أمن المراسلات:</b> فهم إعدادات SPF و DMARC للتأكد من أن رسائل التنبيه القادمة من المصنع حقيقية وليست مزيفة.<br>
+            • <b>أمن الحساسات:</b> استخدام JavaScript (getUserMedia) لعمل نظام مراقبة يطلب إذن الكاميرا ويسجل أي محاولة دخول غير مصرح بها للوحة التحكم.
         </div>
     </div>
 
-    <div class="task-detail">
-        <h3>4. الذكاء الاصطناعي الحديث (AI Integration)</h3>
-        <p>الهدف: جعل النظام "يتنبأ" بالأعطال قبل حدوثها.</p>
-        <div class="how-to">
-            <b>كيفية التنفيذ:</b><br>
-            • <b>Gemini API:</b> ربط الكود بذكاء جوجل لتحليل بيانات الإنفرتر (مثل زيادة التيار).<br>
-            • <b>كورس سيسكو (Modern AI):</b> دراسة أساسيات تعلم الآلة وتطبيقها على بيانات الحساسات.
+    <div class="detail-card card-ai">
+        <h3>4. الذكاء الاصطناعي (Cisco AI & Gemini API)</h3>
+        <p>الهدف: جعل النظام ذكياً يتنبأ بالأعطال ويتحدث معك.</p>
+        <div class="how-to-box">
+            <b>خطوات التنفيذ بالتفصيل:</b>
+            • <b>Gemini API:</b> كتابة كود C++ يرسل بيانات الإنفرتر (التيار، الجهد) لـ AI جوجل ليقوم بتحليلها وإعطاء نصيحة بالإصلاح.<br>
+            • <b>تحويل الصوت:</b> استخدام Web Speech API لتحويل أوامرك الصوتية إلى أكواد برمجية تتحكم في الموتور.
         </div>
     </div>
 
-    <h2 style="color: var(--primary);">ثانياً: الجدول الزمني التفصيلي</h2>
+    <h2 class="section-header">ثانياً: الجدول الزمني الشامل (ترتيب منطقي بالتواريخ)</h2>
     <table>
         <thead>
             <tr>
-                <th>الأسبوع</th>
-                <th>التواريخ</th>
-                <th>ساعات العمل</th>
-                <th>المهمة المقررة</th>
-                <th>المصدر الدراسي</th>
+                <th>الفترة</th>
+                <th>التواريخ (2026)</th>
+                <th>كورسات سيسكو المطلوبة</th>
+                <th>المهمة التقنية الموازية</th>
+                <th>الحالة</th>
             </tr>
         </thead>
         <tbody>
-            <tr class="industrial-row">
-                <td>الأسبوع 1</td>
-                <td>28 يناير - 4 فبراير</td>
-                <td>09:00 - 14:00</td>
-                <td>إعداد C++ وبيئة ESP32 + بداية Networking Basics</td>
-                <td><span class="badge bg-tech">تطبيق عملي</span></td>
+            <tr>
+                <td><b>الأسبوع 1</b></td>
+                <td>28 يناير - 3 فبراير</td>
+                <td>Networking Basics (22 ساعة)</td>
+                <td>تثبيت Visual Studio + ربط ESP32 بالواي فاي</td>
+                <td><span class="status-badge" style="background: var(--cisco);">قيد البدء</span></td>
             </tr>
-            <tr class="cisco-row">
-                <td>الأسبوع 2</td>
-                <td>5 - 12 فبراير</td>
-                <td>10:00 - 16:00</td>
-                <td>إنهاء Networking Basics + دراسة Industrial Networking</td>
-                <td><span class="badge bg-cisco">سيسكو</span></td>
+            <tr>
+                <td><b>الأسبوع 2</b></td>
+                <td>4 فبراير - 10 فبراير</td>
+                <td>Introduction to IoT & Industrial Networking</td>
+                <td>برمجة بروتوكول Modbus TCP وربط الإنفرتر Kinco</td>
+                <td><span class="status-badge" style="background: var(--kinco);">تحت التنفيذ</span></td>
             </tr>
-            <tr class="industrial-row">
-                <td>الأسبوع 3</td>
-                <td>13 - 20 فبراير</td>
-                <td>09:00 - 15:00</td>
-                <td>تطبيقات Kinco VFD و Studio 5000 + كورس IoT</td>
-                <td><span class="badge bg-tech">صناعي</span></td>
+            <tr>
+                <td><b>الأسبوع 3</b></td>
+                <td>11 فبراير - 17 فبراير</td>
+                <td>Introduction to Cybersecurity & Digital Safety</td>
+                <td>بناء محاكي "التصيد" وتأمين اتصالات الـ PLC</td>
+                <td><span class="status-badge" style="background: var(--cyber);">مخطط له</span></td>
             </tr>
-            <tr class="cisco-row">
-                <td>الأسبوع 4</td>
-                <td>21 - 28 فبراير</td>
-                <td>11:00 - 17:00</td>
-                <td>كورسات الأمن السيبراني + بناء مشروع الـ Phishing التعليمي</td>
-                <td><span class="badge bg-cisco">سيسكو/أمن</span></td>
+            <tr>
+                <td><b>الأسبوع 4</b></td>
+                <td>18 فبراير - 24 فبراير</td>
+                <td>Introduction to Modern AI (6 ساعات)</td>
+                <td>دمج Gemini API مع نظام التحكم الصناعي الخاص بك</td>
+                <td><span class="status-badge" style="background: var(--ai);">مخطط له</span></td>
             </tr>
-            <tr class="industrial-row">
-                <td>الأسبوع 5</td>
-                <td>1 - 7 مارس</td>
-                <td>09:00 - 20:00</td>
-                <td>كورس Modern AI + دمج Gemini + المراجعة للامتحان النهائي</td>
-                <td><span class="badge bg-tech">تكامل</span></td>
+            <tr>
+                <td><b>الأسبوع 5</b></td>
+                <td>25 فبراير - 4 مارس</td>
+                <td>Network Technician Career Path (التحضير للامتحان)</td>
+                <td>تجميع المشروع النهائي وتصوير فيديو العرض (Portfolio)</td>
+                <td><span class="status-badge">اللمسات الأخيرة</span></td>
             </tr>
             <tr style="background: rgba(255, 49, 49, 0.2);">
-                <td>الهدف النهائي</td>
-                <td>8 مارس</td>
-                <td>طوال اليوم</td>
-                <td>تقديم كافة الامتحانات والحصول على الشهادات</td>
+                <td><b>الحسم</b></td>
+                <td>5 - 8 مارس</td>
+                <td><b>جميع الامتحانات النهائية</b></td>
+                <td>الحصول على الشهادات والتقديم للمسابقة</td>
                 <td>🏁 مدريد 2026</td>
             </tr>
         </tbody>
     </table>
 
-    <footer style="text-align: center; padding: 40px; color: #777;">
-        تم تصميم هذا الدليل لدمج المهارات العملية (Kinco, ESP32, C++) مع المتطلبات النظرية (Cisco Academy).
+    <div style="text-align: center; margin-top: 40px;">
+        <button onclick="alert('توكل على الله وابدأ باليوم الأول!')" style="padding: 15px 40px; font-size: 1.2rem; background: var(--cisco); border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">تثبيت الخطة والبدء</button>
+    </div>
+
+    <footer style="margin-top: 60px; text-align: center; color: #666; font-size: 0.9rem;">
+        <p>تم بناء هذه الخطة بناءً على مراسلاتك حول: C++، Kinco Manual، ESP32، Cybersecurity Summary، Cisco Cup Flyer 2026.</p>
     </footer>
 </div>
 
